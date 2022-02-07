@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+*{
+
+    margin: 0;
+    padding: 0;
+}
+.container {
+  width:100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.page-header{
+    min-height: calc(0vh); 
+    background-color: #fff;
+}
+.page-main{
+    min-height: calc(100vh - 0vh - 0vh);
+    /* height: calc(100% - 44.50px - 44.50px); */
+    display: flex;
+    background-color: #fff;
+    position: relative;
+}
+/* .leftside-box{
+    width:50%;
+    float:left;
+     margin-top: 20px;
+     border-top-right-radius: 25px;
+     box-shadow: rgb(37, 33, 33);
+     padding: 10px;
+     color: white;
+     box-sizing: border-box;
+    text-align: center;
+    background: #343436;
+    position: relative;
+   
+} */
+.leftside-box {
+    width: 550px;
+    float: left;
+    margin-top: 20px;
+    border-top-right-radius: 25px;
+    box-shadow: rgb(37, 33, 33);
+    padding: 10px;
+    color: white;
+    box-sizing: border-box;
+    text-align: center;
+    background: #343436;
+    position: absolute;
+    height: 100%;
+    margin-top: 20px;
+}
+.rightside-box {
+    width: 800px;
+    /* float: right; */
+    top: auto;
+    position: relative;
+    left: 250px;
+    top: 25px;
+    height: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: white;
+    align-items: flex-end;
+    align-content: flex-end;
+    box-sizing: border-box;
+}
+    /* .rightside-box {
+        width: 50%;
+        float: right;
+        top: auto;
+        position: relative;
+        left: 170px;
+        top: 100px;
+    height: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: white;
+    align-items: flex-end;
+   align-content: flex-end;
+    box-sizing: border-box; 
+} */
+.leftside-box p{
+   
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 36px;
+    color: #FFFFFF;
+    text-align: left;
+    position: absolute;
+    left:40%;
+    top:50%;
+    transform: translate(-50%,-50%);
+   
+}
+.ant-input:placeholder-shown {
+    text-overflow: ellipsis;
+    width: 50%;
+}
+ .login-form-forgot{
+text-align: left;
+margin: auto;
+padding: 120px;
+} 
+
+.login-form-button{
+    text-align: center;
+    font-weight: 500;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:black;
+    color:white;
+    width: 50%;
+    border-radius: 4px;
+    align-items: center;
+ }
+ .ant-btn {
+    line-height: 1.5715;
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    background-image: none;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+    height: 32px;
+    padding: 4px 15px;
+    font-size: 14px;
+    border-radius: 2px;
+    color: white;
+    border-color: black;
+    background: black;
+}
+    .accout-text {
+    text-align: center;
+    font-weight: 500;
+     margin: 8px 0; 
+     width: 50%;
+     top: left;
+     left: 170px;
+     top: 50px;
+    background-color: white;
+    align-items: flex-end;
+    align-content: flex-end;
+    color: black;
+    
+    } 
+    .form-footer{
+    color:black;
+    font-size: 10px;
+      position:fixed;
+      bottom:0;
+      left: 750px;
+      right:auto;
+      padding:10px;
+    }
+   
+    
+    .page-footer{
+        height: 0vh;
+        background-color: #fff;
+       
+    }
+    .ant-form {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        color: rgba(0, 0, 0, 0.85);
+        font-size: 14px;
+        font-variant: tabular-nums;
+        line-height: 1.5715;
+        list-style: none;
+        font-feature-settings: 'tnum', "tnum";
+        width: 50%;
+        border-radius: 4px;
+    }
