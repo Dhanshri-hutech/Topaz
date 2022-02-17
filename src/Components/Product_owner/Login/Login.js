@@ -46,13 +46,13 @@ import {
 
 const Login = () => {
 
-    const [username, setUserName] = useState("");
+    const [email, setEmail] = useState("");
   const [password, setPassward] = useState("");
   const [newdata, setNewData] = useState([]);
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    const allnewData = { username: username, passward: password };
+    const allnewData = { email: email, passward: password };
     setNewData([...newdata, allnewData]);
     console.log(newdata);
 
@@ -113,8 +113,8 @@ const Login = () => {
             name="log in"
             required="required"
             placeholder="Email or Phone number"
-            value={username}
-            onChange={e => setUserName(e.target.value)}
+            value={email}
+            onChange={e => setEmail(e.target.value)}
           >
           </Input>
         </Form.Item>
@@ -135,6 +135,7 @@ const Login = () => {
           >
           </Input>
         </Form.Item>
+        
         
       <Form.Item>
         <Form.Item name="remember" valuePropName="checked" noStyle>

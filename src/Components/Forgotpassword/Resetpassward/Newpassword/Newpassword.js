@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './Newpassword.css';
 import {
   Form,
@@ -12,40 +12,51 @@ import {
 import { ArrowLeftOutlined} from '@ant-design/icons';
 //const { Option } = Select;
 
-const formItemLayout = {
-  labelCol: {
-    xs: {
-      span: 24,
-    },
-    sm: {
-      span: 8,
-    },
-  },
-  wrapperCol: {
-    xs: {
-      span: 24,
-    },
-    sm: {
-      span: 16,
-    },
-  },
-};
-const tailFormItemLayout = {
-  wrapperCol: {
-    xs: {
-      span: 24,
-      offset: 0,
-    },
-    sm: {
-      span: 16,
-      offset: 8,
-    },
-  },
-};
+// const formItemLayout = {
+//   labelCol: {
+//     xs: {
+//       span: 24,
+//     },
+//     sm: {
+//       span: 8,
+//     },
+//   },
+//   wrapperCol: {
+//     xs: {
+//       span: 24,
+//     },
+//     sm: {
+//       span: 16,
+//     },
+//   },
+// };
+// const tailFormItemLayout = {
+//   wrapperCol: {
+//     xs: {
+//       span: 24,
+//       offset: 0,
+//     },
+//     sm: {
+//       span: 16,
+//       offset: 8,
+//     },
+//   },
+// };
 
 
 const Signup = () => {
   const [form] = Form.useForm();
+
+  const[password,setPassword] = useState("");
+  const[confirm,setConfirm] = useState("");
+
+  const[newdata,setNewData] = useState([]);
+
+  const handleOnSubmit =()=>{
+const allnewData ={password:password,confirm:confirm};
+setNewData([...newdata,allnewData]);
+console.log(newdata);
+  }
 
   const onFinish = (values) => {
     console.log('Received values of form: ', values);
@@ -82,16 +93,20 @@ const Signup = () => {
         <Col span={12}>
         <div className="rightside-box">
                 <div className='heading'>
+                <img  src='./key-solid.svg' alt='key' width='40px*40px' />
                     <h1>Set new password</h1>
-                    <h3>Your new password must be different to previously
-use passwords.</h3></div>
+                    <p>Your new password must be different to previously
+use passwords.</p></div>
+
+
           <Form
-            {...formItemLayout}
+            // {...formItemLayout}
             form={form}
             name="register"
-            onFinish={onFinish}
             labelCol={{ span: 24}}
             wrapperCol={{ span: 24}}
+            onFinish={onFinish}
+              onSubmit={handleOnSubmit}
             requiredMark={false}
            colon={false}
         
@@ -155,11 +170,15 @@ use passwords.</h3></div>
                 {
                   required: true,
                   message: 'Please input your password!',
-                },
+                },{min:8},
               ]}
               hasFeedback
             >
-              <Input.Password />
+              <Input.Password 
+              placeholder='Enter your password'
+                values={password}
+                onChange={e=>setPassword(e.target.value)}
+              />
             </Form.Item>
 
             <Form.Item
@@ -183,7 +202,11 @@ use passwords.</h3></div>
                 }),
               ]}
             >
-              <Input.Password />
+              <Input.Password 
+                placeholder='Enter your new password'
+                values={password}
+                onChange={e=>setConfirm(e.target.value)}
+              />
             </Form.Item>
 
 
@@ -206,8 +229,8 @@ use passwords.</h3></div>
               By creating an account you agree to the terms of use and our privacy policy  <a href="www.google.com">agreement</a>
               </Checkbox> */}
             {/* </Form.Item> */}
-            <Form.Item {...tailFormItemLayout}>
-          
+            {/* <Form.Item {...tailFormItemLayout}> */}
+            <Form.Item >
         <Button  htmlType="submit" className="login-form-button">
         Reset Password
         </Button>

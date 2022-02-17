@@ -1,5 +1,5 @@
 import React,{useState}from 'react';
-import './superadmin.css';
+import './superadminFnl.css';
 import {
   Form,
   Input,
@@ -9,6 +9,8 @@ import {
   Checkbox,
   Button,
 } from 'antd';
+//import Signup from './Components/Admin/Signup/Signup.js';
+import { Link } from "react-router-dom";
 // const { Option } = Select;
 
 // const formItemLayout = {
@@ -84,7 +86,7 @@ const SuperAdminFnl = () => {
 
                     <Form
         name="basic"
-        labelCol={{ span: 24}}
+            labelCol={{ span: 24}}
             wrapperCol={{ span: 24}}
         initialValues={{ remember: true }}
         onFinish={onFinish}
@@ -108,6 +110,7 @@ const SuperAdminFnl = () => {
             onChange={e => setUserName(e.target.value)}
           >
           </Input>
+          
         </Form.Item>
 
 
@@ -120,7 +123,7 @@ const SuperAdminFnl = () => {
             type="text"
             name="passward"
             required="required"
-            placeholder="Passward"
+            placeholder="Password"
             value={password}
             onChange={e => setPassward(e.target.value)}
           >
@@ -131,23 +134,24 @@ const SuperAdminFnl = () => {
         <Form.Item name="remember" valuePropName="checked" noStyle>
           <Checkbox>Remember me</Checkbox>
         </Form.Item>
-
-        <a className="login-form-forgot" href="www.google.com">
+        <Link className="login-form-forgot" to={'/Resetpassward'}>Forgot password</Link>
+        {/* <a className="login-form-forgot" href="www.google.com">
           Forgot password
-        </a>
+        </a> */}
       </Form.Item>
 
       <Form.Item>
         <Button  htmlType="submit" className="login-form-button">
          Sign in
         </Button>
-    
-
-        <div className= "accout-text">Don't have an account yet? <a href ="www.google.com">Join Topaz</a></div>
+       
+        {/* <a href={Signup}>Join Topaz</a> */}
+        <div className= "accout-text">Don't have an account yet?  <Link to={'/Signup'}>Join Topaz</Link> </div>
       </Form.Item>
     </Form>
                 <div className='form-footer'>
                 <footer > ©2022 Topaz All rights reserved.Terms of service </footer>
+               
                 </div>
             </div></Col>
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 //import { ReactComponent as Key } from './key-solid.svg';
 import './Resetpassward.css';
 import {
@@ -11,6 +11,7 @@ import {
   Button,
 } from 'antd';
 import { ArrowLeftOutlined} from '@ant-design/icons';
+import { Link } from "react-router-dom";
 // const { Option } = Select;
 
 // const formItemLayout = {
@@ -48,17 +49,17 @@ import { ArrowLeftOutlined} from '@ant-design/icons';
 
 const Resetpassward = () => {
 
-//     const [username, setUserName] = useState("");
-//   const [password, setPassward] = useState("");
-  //const [newdata, setNewData] = useState([]);
+const [email, setEmail] = useState("");
+//const [password, setPassward] = useState("");
+const [newdata, setNewData] = useState([]);
 
-//   const handleOnSubmit = (e) => {
-//     e.preventDefault();
-//     const allnewData = { username: username, passward: password };
-//     setNewData([...newdata, allnewData]);
-//     console.log(newdata);
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    const allnewData = { email: email};
+    setNewData([...newdata, allnewData]);
+    console.log(newdata);
 
-//   }
+  }
 
   const onFinish = (values) => {
     console.log('Success:', values);
@@ -80,8 +81,8 @@ const Resetpassward = () => {
 
         <Col span={12}> <div className="rightside-box">
                 <div className='heading'>
- <img  src='./key-solid.svg' alt='key' width='30px*30px' />
-                    <h3>Forgot password</h3>
+ <img  src='./key-solid.svg' alt='key' width='40px*40px' />
+                    <h3>Forgot password ?</h3>
                     <p>No worries, we'll send you reset instructions.</p></div>
 
 
@@ -91,28 +92,36 @@ const Resetpassward = () => {
             wrapperCol={{ span: 24}}
         initialValues={{ remember: true }}
         onFinish={onFinish}
-        // onSubmit={handleOnSubmit}
+       onSubmit={handleOnSubmit}
         onFinishFailed={onFinishFailed}
         autoComplete="off"
         requiredMark={false}
         colon={false}
       >
-         <Form.Item
-        name="email id"
-        label="E-mail ID"
-        rules={[
-          {
-            type: 'email',
-            message: 'The input is not valid E-mail!',
-          },
-          {
-            required: true,
-            message: 'Please input your E-mail!',
-          },
-        ]}
-      >
-        <Input />
-      </Form.Item>
+           <Form.Item
+                name="email"
+                label="E-mail"
+                rules={[
+                  {
+                    type: 'email',
+                    message: 'The input is not valid E-mail!',
+                  },
+                  {
+                    required: true,
+                    message: 'Please input your E-mail!',
+                  },
+                ]}
+              //hasFeedback
+              >
+                <Input
+                  type="email"
+                  name="email"
+                  required="required"
+                  placeholder="Enter your email..."
+                  value={email}
+                  onChange={e=>setEmail(e.target.value)}
+                ></Input>
+              </Form.Item>
 
       {/* <Form.Item
         name="password"
@@ -143,8 +152,8 @@ const Resetpassward = () => {
         Reset Password
         </Button>
     
-
-        <div className= "accout-text"><ArrowLeftOutlined /> <a href ="www.google.com">Back to log in</a></div>
+        {/* <a href ="www.google.com">Back to log in</a> */}
+        <div className= "accout-text"><ArrowLeftOutlined /> <Link to={'/SuperAdminFnl'}>Back to log in</Link> </div>
       </Form.Item>
     </Form>
                 <div className='form-footer'>

@@ -10,7 +10,7 @@ import {
   //Checkbox,
   Button,
 } from 'antd';
-//import { ArrowLeftOutlined} from '@ant-design/icons';
+import { ArrowLeftOutlined} from '@ant-design/icons';
 
 // const { Option } = Select;
 
@@ -83,7 +83,7 @@ const Checkmail = () => {
                 <div className='heading'>
  <img  src='./envelope-regular.svg' alt='key' width='30px*30px' />
                     <h3>Check your email</h3>
-                    <p>We sent a password reset link to</p> <a href ="www.google.com">centuryply@gmail.com</a></div>
+                    <p>We sent a password reset link to <br/> <a href ="www.google.com">centuryply@gmail.com</a></p></div>
 
 
                     <Form
@@ -144,8 +144,9 @@ const Checkmail = () => {
        Open Email
         </Button>
     
-
+ 
         <div className= "accout-text">Didn’t recive email?  <a href ="www.google.com">Click to resend</a></div>
+        <div className= "accout-text"><ArrowLeftOutlined /> <a href ="www.google.com">Back to log in</a></div>
       </Form.Item>
     </Form>
                 <div className='form-footer'>

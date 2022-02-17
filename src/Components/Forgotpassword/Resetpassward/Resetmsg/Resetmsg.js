@@ -84,6 +84,8 @@ const Resetmsg = () => {
                 <div className='heading'>
                     <h1>Passward Reset</h1>
                     {/* <h3>Create Password</h3> */}
+                    {/* <p>"Your password has been sucessfully reset.
+Click bleow to login magically."</p> */}
                     </div>
           <Form
             {...formItemLayout}
@@ -101,7 +103,7 @@ const Resetmsg = () => {
 <Result
     status="success"
     title="Your password has been sucessfully reset.
-click bleow to login magically."
+Click bleow to login magically."
     // subTitle="Order number: 2017182818828182881 Cloud server configuration takes 1-5 minutes, please wait."
     extra={[
     //   <Button type="primary" key="console">

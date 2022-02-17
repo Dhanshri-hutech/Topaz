@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+.Container,html,body{
+
+    margin: 0%;
+    padding: 0%;
+    width:100%;
+    height:100%;
+  
+} 
+
+.Header.ant-layout-header {
+    width: 100%;
+    position: absolute;
+    width: 1441px;
+    height: 35px;
+    left: -1px;
+    top: 0px;
+    background: #095198;
+}
+
+
+.Header-heading{
+    position: absolute;
+    width: 1440px;
+    height: 60px;
+    left: 0px;
+    top: 35px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);
+}
+
+
+.site-layout-content{
+    position: absolute;
+    width: 197px;
+    height: 17px;
+    left: 100px;
+    top: 120px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    text-align: center;
+    color: #78787B;
+}
+
+.Sider.ant-layout-sider {
+  
+    left: 0px;
+    top: 90px;
+    float: right;
+    background: #041662;
+    height: 100%;
+    width: 100px;
+    position: absolute;
+    display: inline-flex;
+}
+.main{ 
+    
+    width: 1222px;
+    height: 910px;
+    left: 160px;
+    top: 160px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(71, 69, 69, 0.25);
+}
+.main p span{
+left: 512px;
+top: 315px;
+font-family: Lato;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 19px;
+display: inline-flex;
+align-items: center;
+color:black;
+margin:10px;
+
+}
+.ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::after {
+    display: inline-block;
+    margin-right: 4px;
+    color: #FF4D4F;
+    font-size: 14px;
+    font-family: SimSun, sans-serif;
+    line-height: 1;
+    content: '*';
+    
+}
+.ant-form-item-control-input{
+  width: 100%;
+}
+
+.ant-layout-footer {
+    position: absolute;
+    /* width: 289px; */
+    height: 16px;
+    /* left: 638px; */
+    top: 1284px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #565A67;
+    width: 100%;
+    text-align: center;
+}
+.ant-form {
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: 'tnum', "tnum";
+    border-radius: 5px;
+}
+.ant-form-item-label > label {
+   /* position: absolute; */
+    display: inline-flex;
+    align-items: center;
+    height: 32px;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    width:70%
+}
